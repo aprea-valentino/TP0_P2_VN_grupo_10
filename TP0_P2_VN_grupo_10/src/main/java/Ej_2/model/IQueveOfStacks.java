@@ -7,9 +7,9 @@ public interface IQueveOfStacks {
 
     void remove();
 
-    IStack getFirtsRow();
+    IStack getFirtsCol();
 
-    int getSize();
+
 
     boolean isEmpty();
 

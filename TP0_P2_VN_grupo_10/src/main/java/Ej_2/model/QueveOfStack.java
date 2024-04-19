@@ -35,14 +35,10 @@ public class QueveOfStack implements IQueveOfStacks{
     }
 
     @Override
-    public IStack getFirtsRow() {
+    public IStack getFirtsCol() {
         return this.queve[0];
     }
 
-    @Override
-    public int getSize() {
-        return this.count;
-    }
 
     public boolean isEmpty() {
         return this.count == 0;
