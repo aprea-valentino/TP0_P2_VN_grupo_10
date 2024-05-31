@@ -8,13 +8,13 @@ public class Utils {
         while(!colacola.isEmpty()){
             System.out.print("[");
             while(!colacola.getFirts().isEmpty()){
-                System.out.print(colacola.getFirts().getFirts()+", ");
+                System.out.print(colacola.getFirts().getFirts()+",");
                 colacola.getFirts().remove();
             }
             System.out.print("]");
             colacola.remove();
         }
-
+        System.out.println();
 
 
 
@@ -50,6 +50,30 @@ public class Utils {
             aux.remove();
         }
         return copy;
+    }
+
+    public static int getSizeQueve(IQueve queve){
+        IQueve<Object> aux = copyQ(queve);
+        int size = 0;
+        while (!aux.isEmpty()) {
+            aux.remove();
+            size++;
+
+        }
+        return size;
+    }
+
+    public static IQueve eveuq(IQueve queve) {
+        IStack<Object> aux = new Stack<>();
+        while (!queve.isEmpty()) {
+            aux.add(queve.getFirts());
+            queve.remove();
+        }
+        while (!aux.isEmpty()) {
+            queve.add(aux.getTop());
+            aux.remove();
+        }
+        return queve;
     }
 
 

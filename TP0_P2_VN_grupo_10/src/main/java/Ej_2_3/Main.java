@@ -16,14 +16,19 @@ public class Main {
         colacola.add(queve);
         IQueve<Object> queve1 = new QueveGenerico<>();
         queve1.add(4);
+        queve1.add(5);
+        queve1.add(6);
         IQoQ colacola1 = new QueueOfQueue();
         colacola1.add(queve1);
         colacola1.add(queve);
         colacola.concatenate(colacola1);
-
+        Utils.print(colacola);
+        colacola.reverseWithDepth();
         Utils.print(colacola);
         colacola.flat();
         Utils.print(colacola);
+
+
 
     }
 }

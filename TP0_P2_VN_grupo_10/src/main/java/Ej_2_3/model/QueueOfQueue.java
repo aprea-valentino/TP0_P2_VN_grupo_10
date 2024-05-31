@@ -1,5 +1,5 @@
 package Ej_2_3.model;
-
+import Ej_2_3.util.Utils;
 
 
 public class QueueOfQueue implements IQoQ{
@@ -71,6 +71,16 @@ public class QueueOfQueue implements IQoQ{
 
     @Override
     public void reverseWithDepth() {
+        IStack<Object> aux = new Stack<>();
+        while(!isEmpty()){
+            aux.add(Utils.eveuq(getFirts()));;
+            remove();
+        }
+
+        while(!aux.isEmpty()){
+            add((IQueve) aux.getTop());
+            aux.remove();
+        }
 
     }
 }
