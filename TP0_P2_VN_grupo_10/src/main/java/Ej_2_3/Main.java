@@ -10,9 +10,7 @@ public class Main {
         queve.add(1);
         queve.add(2);
         queve.add(3);
-
         IQoQ colacola = new QueueOfQueue();
-
         colacola.add(queve);
         IQueve<Object> queve1 = new QueveGenerico<>();
         queve1.add(4);
